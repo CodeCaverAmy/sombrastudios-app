@@ -1,0 +1,25 @@
+.carousel-caption {
+    top: 25%;
+
+    @media (min-width: 1000px)
+    {
+      top: 35%;
+    }
+
+    @media (min-width: 1200px)
+    {
+      top: 50%;
+    }
+
+
+    bottom: auto;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,13 @@
+#featured {
+  background-color: $ss-orange;
+  padding: 7em 0 5em 0;
+  h1, p, a {
+    font-family: 'verdana', sans-serif;
+    color: white;
+    font-weight: 200;
+  }
+
+  h1 {
+    line-height: 2em;
+  }
+}
