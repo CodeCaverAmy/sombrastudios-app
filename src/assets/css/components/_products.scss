@@ -1,3 +1,44 @@
+#product-selector {
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+
+  h2 {
+    line-height: 3em;
+  }
+
+  #product-category-button-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .category {
+        display: inline-block;
+        margin: 1em 2em;
+        cursor: pointer;
+      }
+
+      .title {
+        line-height: 3em;
+      }
+  }
+
+}
+
+#thumbnail-gallery {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em 0 3em;
+  .card {
+    margin: 1em;
+  }
+}
+
+
 #product-list {
   background-color: white;
   padding: 2em;
@@ -5,7 +46,22 @@
 
 .product-tile {
   min-height: 31em;
+  text-align: left;
+
+  .product-title {
+    font-size: 1.3em;
+    line-height: 2.5em;
+    color: #2D2D2D;
+  }
   img {
     width: 100%;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  button {
+    margin-right: -1em;
   }
 }

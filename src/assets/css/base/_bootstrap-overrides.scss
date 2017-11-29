@@ -35,11 +35,6 @@ body {
   .glyphicon {
     font-size: 2em;
     color: #bbb;
-  }
-
-  .badge {
-    background-color: $ss-orange;
-    border-radius: 25px;
-    margin-top: -15px;
+    position: static;
   }
 }

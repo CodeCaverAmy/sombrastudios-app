@@ -6,11 +6,11 @@
 
 // vendor
 @import "../vendor/normalize.css";
+@import "./components/navbar";
 
 @import "./components/carousel";
 @import "./components/products";
 @import "./components/card";
-@import "./components/gallery";
 @import "./components/featured";
 @import "./components/additional-details";
 @import "./components/footer";

@@ -22,7 +22,8 @@ const Footer = () =>
       <Col xs={12} md={4} lg={4} className="text-center">
         <h3>About Us</h3>
         <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60+'px'}} />
-        <p>Sombra means "shade"</p>
+        <p>Sombra means "shade" ...</p>
+        <p>so made by a shady characther</p>
       </Col>
 
       <Col xs={12} md={4} lg={4} className="text-center">

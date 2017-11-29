@@ -1,0 +1,14 @@
+.count {
+  display: inline-block;
+  background-color: $ss-orange;
+  padding: 3px 7px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  border-radius: 25px;
+  margin-left: -1em;
+  margin-top: -1em;
+  z-index: 999;
+}
