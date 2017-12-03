@@ -1,0 +1,40 @@
+* {
+  font-family: $merriweather;
+  color: #bbb;
+}
+
+body {
+  background-color: #e9ecef;
+}
+
+.container {
+  padding: 0;
+}
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.row {
+  margin: 0;
+}
+
+.navbar {
+  border: none;
+  background-color: white;
+  height: 80px;
+  margin: 0;
+  padding: 1em 2em;
+  border-radius: 0;
+
+  .navbar-right {
+    margin: 0;
+    padding-right: 1em;
+  }
+
+  .glyphicon {
+    font-size: 2em;
+    color: #bbb;
+    position: static;
+  }
+}

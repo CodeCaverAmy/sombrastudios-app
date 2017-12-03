@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url(../vendor/normalize.css);
+.carousel-caption {
+  top: 50%;
+  bottom: auto;
+}
+
+.card {
+  margin: 3em;
+}
+
+#product-selector {
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+}
+
+#product-selector h2 {
+  line-height: 3em;
+}
+
+#product-selector #product-category-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#product-selector #product-category-button-container .category {
+  display: inline-block;
+  margin: 1em 2em;
+  cursor: pointer;
+}
+
+#product-selector #product-category-button-container .title {
+  line-height: 3em;
+}
+
+#thumbnail-gallery {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em 0 3em;
+}
+
+#thumbnail-gallery .card {
+  margin: 1em;
+}
+
+#featured {
+  background-color: #F97B1E;
+  padding: 7em 0 5em 0;
+}
+
+#featured h1, #featured p, #featured a {
+  font-family: 'verdana', sans-serif;
+  color: white;
+  font-weight: 200;
+}
+
+#featured h1 {
+  line-height: 2em;
+}
+
+#additional-details {
+  background-color: white;
+  padding: 5em 0 4em;
+}
+
+#additional-details img {
+  padding-bottom: 1em;
+}
+
+footer {
+  background-color: #ccc;
+  color: white;
+}
+
+footer h5, footer h6, footer p, footer hr, footer i, footer a {
+  color: white !important;
+}
+
+footer hr {
+  color: white;
+}
+
+footer .social-media-container {
+  background-color: orange;
+  color: white;
+}
+
+footer .footer-copyright {
+  color: white;
+  line-height: 5em;
+  background-color: #ccc;
+}
+
+* {
+  font-family: "Merriweather", serif;
+  color: #bbb;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1600px;
+}

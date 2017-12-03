@@ -1,0 +1,26 @@
+#featured {
+  background-color: $ss-orange;
+  h1, p, a {
+    font-family: 'verdana', sans-serif;
+    color: white;
+    font-weight: 200;
+  }
+
+  h1 {
+    line-height: 2em;
+  }
+
+  .flex-container {
+    display: flex;
+    .bottom {
+      padding-bottom: -1em;
+      align-self: flex-end;
+    }
+    .middle {
+      align-items: center;
+      align-self: center;
+      padding-bottom: 1em;
+    }
+  }
+
+}

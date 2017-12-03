@@ -1,0 +1,18 @@
+// Import in all of the CSS into this file and then link to index.html
+
+// base
+@import "./base/colors";
+@import "./base/fonts";
+
+// vendor
+@import "../vendor/normalize.css";
+@import "./components/navbar";
+
+@import "./components/carousel";
+@import "./components/products";
+@import "./components/card";
+@import "./components/featured";
+@import "./components/additional-details";
+@import "./components/footer";
+
+@import "./base/bootstrap-overrides";
