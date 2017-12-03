@@ -16,6 +16,14 @@ const HeaderCarousel = () =>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
+    <img alt="Sobmbr Studio - Perfect Wave" src="/images/carousel/perfect-wave.jpg" />
+    <Carousel.Caption>
+      <h1 className="display-1">Perfect Wave</h1>
+      <p>Everyone has a wave to ride through life, what’s yours?</p>
+      <Button bsSize="large" bsStyle="warning">Learn More</Button>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
     <img alt="Sobmbr Studio - Pendants" src="/images/carousel/atomic-daisy-bracelet.jpg" />
     <Carousel.Caption>
       <h1 className="display-1">Atomic Flower</h1>

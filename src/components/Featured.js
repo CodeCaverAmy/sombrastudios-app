@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Grid, Row, Col, Button,
-  Image, responsive
+  Image
 } from 'react-bootstrap';
 
 const Featured = () =>

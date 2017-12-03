@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import {
+  Modal, Button
+} from 'react-bootstrap';
+
+
 import TopNav from '../components/TopNav';
 import Carousel from '../components/Carousel';
 import ProductList from '../components/ProductList';
@@ -12,6 +17,7 @@ import Footer from '../components/Footer';
 export default class Home extends Component {
   state = {
     filterCategory: 'all',
+    modalIsOpen: true,
 
     products: [
       {
@@ -249,15 +255,17 @@ export default class Home extends Component {
   };
 
   filterByCategory = category => {
-    var filterCategory =  category == "All" ? category.toLowerCase() : category.toLowerCase().slice(0, -1);
+    var filterCategory =  category === "All" ? category.toLowerCase() : category.toLowerCase().slice(0, -1);
     this.setState({ filterCategory: filterCategory });
   };
+
+  toggleModal = () => this.setState({modalIsOpen: !this.state.modalIsOpen});
 
   getNumberOfItemsInCart = () => this.state.items.length;
 
 
   onAddItemToCart = (index, quantity) => {
-    this.state.purchases[index].total += quantity;
+    this.setState.purchases[index].total += quantity;
     this.setState(this.state);
   };
 
@@ -272,6 +280,19 @@ export default class Home extends Component {
         <TopNav />
         <Carousel />
 
+        <Modal show={this.state.modalIsOpen} onClose={this.toggleModal}>
+          <Modal.Header closeButton>
+             <Modal.Title>Modal heading</Modal.Title>
+           </Modal.Header>
+           <Modal.Body>
+             <h4>Text in a modal</h4>
+             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+           </Modal.Body>
+           <Modal.Footer>
+            <Button onClick={this.toggleModal}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+
         <CategorySelector
           categories={this.state.categories}
           filterByCategory={this.filterByCategory}
@@ -281,6 +302,8 @@ export default class Home extends Component {
         <ProductList
           products={this.state.products}
           filterCategory={this.state.filterCategory}
+          modalIsOpen={this.state.modalIsOpen}
+          toggleModal={this.toggleModal}
         />
 
         <Featured />
