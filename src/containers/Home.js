@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import {
-  Modal, Button
+  Button
 } from 'react-bootstrap';
 
+import ProductModal from '../components/ProductModal';
 
 import TopNav from '../components/TopNav';
 import Carousel from '../components/Carousel';
@@ -17,7 +18,7 @@ import Footer from '../components/Footer';
 export default class Home extends Component {
   state = {
     filterCategory: 'all',
-    modalIsOpen: true,
+    modalIsOpen: false,
 
     products: [
       {
@@ -280,18 +281,10 @@ export default class Home extends Component {
         <TopNav />
         <Carousel />
 
-        <Modal show={this.state.modalIsOpen} onClose={this.toggleModal}>
-          <Modal.Header closeButton>
-             <Modal.Title>Modal heading</Modal.Title>
-           </Modal.Header>
-           <Modal.Body>
-             <h4>Text in a modal</h4>
-             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-           </Modal.Body>
-           <Modal.Footer>
-            <Button onClick={this.toggleModal}>Close</Button>
-          </Modal.Footer>
-        </Modal>
+        <ProductModal
+          modalIsOpen={this.state.modalIsOpen}
+          toggleModal={this.toggleModal}
+        />
 
         <CategorySelector
           categories={this.state.categories}
