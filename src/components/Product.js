@@ -10,7 +10,7 @@ import {
 const Product = props =>
   <Col xs={6} md={4} lg={4} className="product-tile">
     <Row className="image-container">
-      <a href="#" className="overlay">
+      <div className="overlay" onClick={props.toggleModal}>
         <Image src={props.image} alt={props.name} className="image" />
         <Button
           className="btn-quickview"
@@ -19,7 +19,7 @@ const Product = props =>
         >
           <Glyphicon glyph="zoom-in" /><span> Quick View</span>
         </Button>
-      </a>
+      </div>
     </Row>
 
     <Row>

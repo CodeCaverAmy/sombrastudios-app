@@ -19,6 +19,7 @@ export default class Home extends Component {
   state = {
     filterCategory: 'all',
     modalIsOpen: false,
+    selectedProduct: null,
 
     products: [
       {
@@ -284,6 +285,7 @@ export default class Home extends Component {
         <ProductModal
           modalIsOpen={this.state.modalIsOpen}
           toggleModal={this.toggleModal}
+          selectedProduct={this.selectedProduct}
         />
 
         <CategorySelector
@@ -297,6 +299,7 @@ export default class Home extends Component {
           filterCategory={this.state.filterCategory}
           modalIsOpen={this.state.modalIsOpen}
           toggleModal={this.toggleModal}
+          selectedProduct={this.selectedProduct}
         />
 
         <Featured />
