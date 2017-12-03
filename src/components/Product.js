@@ -31,7 +31,7 @@ const Product = props =>
     </Row>
 
 
-  </Col>;
+  </Col>
 
   Product.propTypes = {
     name: PropTypes.string.isRequired,
