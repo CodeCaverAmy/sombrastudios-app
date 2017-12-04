@@ -9,12 +9,16 @@ import FontAwesome from 'react-fontawesome';
 const Footer = () =>
   <Grid id="footer">
     <Row className="social-media">
-      <Col xs={12} md={4} lg={4} className="text-center">
-        <FontAwesome name="facebook" />
-        <FontAwesome name="twitter" />
-        <FontAwesome name="google" />
-        <FontAwesome name="linkedin" />
-        <FontAwesome name="instagram" />
+      <Col xs={12} md={12} lg={12} className="text-center">
+      <span>Follow us on </span>
+      <a href="https://twitter.com/_sombraloco_" target='_blank'>
+        <FontAwesome
+          name='twitter'
+        />
+      </a>
+      <a href="https://www.instagram.com/sombralocostudio/" arget='_blank'>
+        <FontAwesome name='instagram'/>
+      </a>
       </Col>
     </Row>
 
@@ -37,7 +41,7 @@ const Footer = () =>
       <h3>Contact Us</h3>
         <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60+'px'}} />
         <p><Glyphicon glyph="glyphicon glyphicon-phone-alt" /> +1 505.288.9446</p>
-        <p><Glyphicon glyph="glyphicon glyphicon-envelope" /> agreggarcia@sombrastudios.com</p>
+        <p><Glyphicon glyph="glyphicon glyphicon-envelope" /> agregggarcia@gmail.com</p>
         <p><Glyphicon glyph="glyphicon glyphicon-map-marker" /> Albequerque • NM, US</p>
       </Col>
     </Row>

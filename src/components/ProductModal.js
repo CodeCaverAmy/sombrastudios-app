@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Modal, Button
+  Row, Col,
+  Modal, Button, Image
 } from 'react-bootstrap';
 
 const ProductModal = props =>
@@ -10,13 +11,25 @@ const ProductModal = props =>
   <Modal
     show={props.modalIsOpen}
     onClose={props.toggleModal}
+    bsSize='lg'
   >
     <Modal.Header closeButton>
-       <Modal.Title>{props.productModal.title}</Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>About this Product</h4>
-       <p>${props.productModal.price}</p>
+      <Row>
+        <Col xs={12} md={6} lg={6}>
+          <Image src={props.productModal.image} alt={props.productModal.name} />
+        </Col>
+        <Col xs={12} md={6} lg={6}>
+          <Modal.Title>{props.productModal.title}</Modal.Title><br />
+          <p>
+            {props.productModal.description.split('\n').map((item, key) => {
+              return <span key={key}>{item}<br/></span>
+            })}
+          </p>
+          <p>{props.productModal.price}</p>
+        </Col>
+      </Row>
      </Modal.Body>
      <Modal.Footer>
       <Button onClick={() => props.toggleModal(0)}>Close</Button>

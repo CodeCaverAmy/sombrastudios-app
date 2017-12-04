@@ -17,6 +17,19 @@
     color: white;
     line-height: 4em;
     color: white;
+    .fa {
+      height: 4em;
+      vertical-align: middle;
+      margin: 0 1em;
+    }
+    :before {
+      color: white;
+      font-size: 2em;
+    }
+    span {
+      color: white;
+      line-height: 4em;
+    }
   }
 
   .contact-info {
