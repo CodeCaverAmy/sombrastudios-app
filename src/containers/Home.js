@@ -18,7 +18,7 @@ export default class Home extends Component {
     selectedProductId: 0,
 
     productModal: {
-      id: 0,
+      productId: 0,
       title: "Product Title",
       image: "/images/defaultModal.png",
       price: 0
@@ -299,11 +299,28 @@ export default class Home extends Component {
   };
 
   toggleModal = productId => {
+    this.getProductById(productId);
     this.setState({
       modalIsOpen: !this.state.modalIsOpen,
-      selectedProductId: productId
     });
-  }
+  };
+
+  getProductById = id => {
+    var products = this.state.products;
+     var keys = Object.keys(products);
+     for(var i = 0; i < keys.length; i++) {
+          var key = (keys[i]);
+          var product = products[key];
+          if(product.id === id) {
+            this.state.productModal = {
+              productId: product.id,
+              title: product.name,
+              image: product.image,
+              price: product.price
+            };
+          }
+      }
+  };
 
   getNumberOfItemsInCart = () => this.state.items.length;
 
@@ -327,7 +344,7 @@ export default class Home extends Component {
         <ProductModal
           modalIsOpen={this.state.modalIsOpen}
           toggleModal={this.toggleModal}
-          selectedProductId={this.state.selectedProductId}
+          productModal={this.state.productModal}
         />
 
         <CategorySelector
@@ -341,7 +358,6 @@ export default class Home extends Component {
           filterCategory={this.state.filterCategory}
           modalIsOpen={this.state.modalIsOpen}
           toggleModal={this.toggleModal}
-          selectedProductId={this.state.selectedProductId}
         />
 
         <Featured />

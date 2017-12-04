@@ -12,11 +12,11 @@ const ProductModal = props =>
     onClose={props.toggleModal}
   >
     <Modal.Header closeButton>
-       <Modal.Title>{props.selectedProductId}</Modal.Title>
+       <Modal.Title>{props.productModal.title}</Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>About this {props.selectedProductId}</h4>
-       <p>This will include a larger image of the product along with a description, and add to cart button.</p>
+       <h4>About this Product</h4>
+       <p>${props.productModal.price}</p>
      </Modal.Body>
      <Modal.Footer>
       <Button onClick={() => props.toggleModal(0)}>Close</Button>
@@ -26,7 +26,6 @@ const ProductModal = props =>
   ProductModal.propTypes = {
     modalIsOpen: PropTypes.bool.isRequired,
     toggleModal: PropTypes.func.isRequired,
-    selectedProductId: PropTypes.number.isRequired
   }
 
 
