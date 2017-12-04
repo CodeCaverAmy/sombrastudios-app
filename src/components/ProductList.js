@@ -22,7 +22,6 @@ const ProductList = props =>
               price={product.price}
               image={product.image}
               toggleModal={props.toggleModal}
-              selectedProductId={props.selectedProductId}
             />
           )
         )
@@ -31,11 +30,11 @@ const ProductList = props =>
           props.products
             .map((product, index) =>
             <Product key={index}
+              id={product.id}
               name={product.name}
               price={product.price}
               image={product.image}
               toggleModal={props.toggleModal}
-              selectedProductId={props.selectedProductId}
             />
           )
         )
@@ -48,8 +47,7 @@ ProductList.propTypes = {
   products: PropTypes.array.isRequired,
   filterCategory: PropTypes.string.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
-  toggleModal: PropTypes.func.isRequired,
-  selectedProductId: PropTypes.number.isRequired
+  toggleModal: PropTypes.func.isRequired
 }
 
 export default ProductList;

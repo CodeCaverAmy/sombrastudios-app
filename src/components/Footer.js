@@ -4,17 +4,12 @@ import {
   Glyphicon
 } from 'react-bootstrap';
 
-import FontAwesome from 'react-fontawesome';
-
 const Footer = () =>
   <Grid id="footer">
     <Row className="social-media">
       <Col xs={12} md={4} lg={4} className="text-center">
-        <FontAwesome name="facebook" />
-        <FontAwesome name="twitter" />
-        <FontAwesome name="google" />
-        <FontAwesome name="linkedin" />
-        <FontAwesome name="instagram" />
+        <a href="https://twitter.com/_sombraloco_"><span><Glyphicon glyph="twitter" /></span></a>
+        <a href="https://www.instagram.com/sombralocostudio/"><span><Glyphicon glyph="instagram" /></span></a>
       </Col>
     </Row>
 
