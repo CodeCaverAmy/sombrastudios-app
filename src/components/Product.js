@@ -10,12 +10,12 @@ import {
 const Product = props =>
   <Col xs={6} md={4} lg={4} className="product-tile">
     <Row className="image-container">
-      <div className="overlay" onClick={props.toggleModal}>
+      <div className="overlay" onClick={() => props.toggleModal(props.selectedProductId)}>
         <Image src={props.image} alt={props.name} className="image" />
         <Button
           className="btn-quickview"
           bsStyle="warning"
-          onClick={props.toggleModal}
+          onClick={() => props.toggleModal(props.selectedProductId)}
         >
           <Glyphicon glyph="zoom-in" /><span> Quick View</span>
         </Button>
@@ -37,9 +37,8 @@ const Product = props =>
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    modalStyle: PropTypes.bool.isRequired,
-    toggleModal: PropTypes.func.isRequired
+    toggleModal: PropTypes.func.isRequired,
+    selectedProductId: PropTypes.number.isRequired
   }
 
 export default Product;

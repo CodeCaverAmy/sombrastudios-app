@@ -2,30 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Grid, Row, Col,
-  Glyphicon,
   Modal, Button
 } from 'react-bootstrap';
 
 const ProductModal = props =>
 
-  <Modal show={props.modalIsOpen} onClose={props.toggleModal}>
+  <Modal
+    show={props.modalIsOpen}
+    onClose={props.toggleModal}
+  >
     <Modal.Header closeButton>
-       <Modal.Title>Product Title</Modal.Title>
+       <Modal.Title>{props.selectedProductId}</Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>About this Product</h4>
+       <h4>About this {props.selectedProductId}</h4>
        <p>This will include a larger image of the product along with a description, and add to cart button.</p>
      </Modal.Body>
      <Modal.Footer>
-      <Button onClick={props.toggleModal}>Close</Button>
+      <Button onClick={() => props.toggleModal(0)}>Close</Button>
     </Modal.Footer>
   </Modal>
 
-
-  Modal.propTypes = {
+  ProductModal.propTypes = {
     modalIsOpen: PropTypes.bool.isRequired,
     toggleModal: PropTypes.func.isRequired,
+    selectedProductId: PropTypes.number.isRequired
   }
 
 

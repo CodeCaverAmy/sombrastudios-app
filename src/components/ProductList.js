@@ -16,14 +16,27 @@ const ProductList = props =>
           props.products
             .filter(product => product.category === props.filterCategory)
             .map((product, index) =>
-            <Product key={index} name={product.name} price={product.price} image={product.image} toggleModal={props.toggleModal}/>
+            <Product
+              key={index}
+              name={product.name}
+              price={product.price}
+              image={product.image}
+              toggleModal={props.toggleModal}
+              selectedProductId={props.selectedProductId}
+            />
           )
         )
         :
         (
           props.products
             .map((product, index) =>
-            <Product key={index} name={product.name} price={product.price} image={product.image} toggleModal={props.toggleModal}/>
+            <Product key={index}
+              name={product.name}
+              price={product.price}
+              image={product.image}
+              toggleModal={props.toggleModal}
+              selectedProductId={props.selectedProductId}
+            />
           )
         )
       }
@@ -36,6 +49,7 @@ ProductList.propTypes = {
   filterCategory: PropTypes.string.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
+  selectedProductId: PropTypes.number.isRequired
 }
 
 export default ProductList;
