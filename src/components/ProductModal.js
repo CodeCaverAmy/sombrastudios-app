@@ -32,7 +32,7 @@ const ProductModal = props =>
       </Row>
      </Modal.Body>
      <Modal.Footer>
-      <Button onClick={() => props.toggleModal}>Close</Button>
+      <Button onClick={() => props.toggleModal()}>Close</Button>
     </Modal.Footer>
   </Modal>
 
