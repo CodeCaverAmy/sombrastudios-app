@@ -18,8 +18,6 @@ const TopNav = () =>
       <Navbar.Collapse>
         <Nav>
           <NavItem eventKey={1} href="#">Home</NavItem>
-          <NavItem eventKey={2} href="#">Features</NavItem>
-          <NavItem eventKey={3} href="#">Pricing</NavItem>
         </Nav>
         <Nav pullRight>
           <NavItem eventKey={1} href="#"><CartCount /></NavItem>

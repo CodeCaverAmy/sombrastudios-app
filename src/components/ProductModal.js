@@ -10,7 +10,7 @@ const ProductModal = props =>
 
   <Modal
     show={props.modalIsOpen}
-    onClose={props.toggleModal(0)}
+    onClose={props.toggleModal}
     bsSize='lg'
   >
     <Modal.Header closeButton>
@@ -21,7 +21,12 @@ const ProductModal = props =>
           <Image src={props.productModal.image} alt={props.productModal.name} />
         </Col>
         <Col xs={12} md={6} lg={6}>
-          <Modal.Title>{props.productModal.title}</Modal.Title>
+          <Modal.Title>{props.productModal.title}</Modal.Title><br />
+          <p>
+            {props.productModal.description.split('\n').map((item, key) => {
+              return <span key={key}>{item}<br/></span>
+            })}
+          </p>
           <p>{props.productModal.price}</p>
         </Col>
       </Row>

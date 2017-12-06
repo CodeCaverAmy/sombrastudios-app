@@ -15,13 +15,13 @@ const AdditionalDetails = () =>
         </Col>
         <Col xs={12} md={4} className="text-center">
           <img src="/images/icon-shipping.png" alt="Shipping" />
-          <h5>Free Shipping</h5>
-          <p>More details about this here</p>
+          <h5>We Ship</h5>
+          <p>shipping options available</p>
         </Col>
         <Col xs={12} md={4} className="text-center">
           <img src="/images/icon-satisfaction.png" alt="Satisfaction Guaranteed" />
           <h5>Satisfaction Guaranteed</h5>
-          <p>Tell visitor a litte more here</p>
+          <p>Hand crafted jewelry does have variations</p>
         </Col>
       </Row>
     </Grid>

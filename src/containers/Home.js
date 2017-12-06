@@ -21,6 +21,7 @@ export default class Home extends Component {
       productId: 0,
       title: "Product Title",
       image: "/images/defaultModal.png",
+      description: "All of our jewelry is handcrafeted by Andres Greggario Garcia",
       price: 0
     },
 
@@ -316,7 +317,8 @@ export default class Home extends Component {
               productId: product.id,
               title: product.name,
               image: product.image,
-              price: this.convertToCurrency(product.price)
+              price: this.convertToCurrency(product.price),
+              description: this.getDescription(product.category)
             };
           }
       }
@@ -330,6 +332,21 @@ export default class Home extends Component {
       return "$" + price.slice(0, price.length-3) + "," + price.slice(number.length-3, 3);
     }
   };
+
+  getDescription = category => {
+    var description="";
+
+    if(category === "bracelet") {
+      description = 'Small: inside diameter of 5.5 inches.\nMedium: inside diameter of 5.75 inches.\nLarge: inside diamter of 6 inches.';
+    } else if (category === "pendant") {
+      description = 'Post and dangle are available.';
+    } else if (category === "ring") {
+      description = "Available in sizes 6 to 13 (American)";
+    } else if (category === "earring") {
+      description = 'Post and dangle are available.';
+    }
+    return description;
+  }
 
   getNumberOfItemsInCart = () => this.state.items.length;
 
