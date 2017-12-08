@@ -4,6 +4,8 @@ import ProductModal from '../components/ProductModal';
 
 import TopNav from '../components/TopNav';
 import Carousel from '../components/Carousel';
+
+import Products from '../data/products';
 import ProductList from '../components/ProductList';
 import CategorySelector from '../components/CategorySelector';
 
@@ -37,6 +39,60 @@ export default class Home extends Component {
     this.setState({ filterCategory: filterCategory });
   };
 
+  toggleModal = productId => {
+    this.getProductById(productId);
+    this.setState({
+      modalIsOpen: !this.state.modalIsOpen
+    });
+  };
+
+  getProductById = id => {
+    var keys = Object.keys(Products);
+    for(var i = 0; i < keys.length; i++) {
+      var product = Products[keys[i]];
+      if(product.id === id) {
+        this.updateProductModal(product);
+      }
+    }
+  };
+
+  updateProductModal = product => {
+    this.setState(() => ({
+      productModal: {
+        productId: product.id,
+        title: product.name,
+        image: product.image,
+        price: this.convertToCurrency(product.price),
+        description: this.getDescription(product.category)
+      }
+    }));
+  };
+
+  convertToCurrency = number => {
+    var price = number.toString();
+    if (price.length <= 3) {
+      return "$" + price;
+    } else {
+      return "$" + price.slice(0, price.length-3) + "," + price.slice(number.length-3, 3);
+    }
+  };
+
+  getDescription = category => {
+    var description="";
+
+    if(category === "bracelet") {
+      description = 'Small: inside diameter of 5.5 inches.\nMedium: inside diameter of 5.75 inches.\nLarge: inside diamter of 6 inches.';
+    } else if (category === "pendant") {
+      description = 'Post and dangle are available.';
+    } else if (category === "ring") {
+      description = "Available in sizes 6 to 13 (American)";
+    } else if (category === "earring") {
+      description = 'Post and dangle are available.';
+    }
+    return description;
+  };
+
+
   getNumberOfItemsInCart = () => this.state.items.length;
 
 
@@ -50,6 +106,7 @@ export default class Home extends Component {
     this.setState(this.state);
   };
 
+
   render() {
     return (
       <div>
@@ -58,8 +115,8 @@ export default class Home extends Component {
 
         <ProductModal
           modalIsOpen={this.state.modalIsOpen}
-          toggleModal={this.toggleModal}
           productModal={this.state.productModal}
+          toggleModal={this.toggleModal}
         />
 
         <CategorySelector
@@ -70,6 +127,7 @@ export default class Home extends Component {
         <ProductList
           filterCategory={this.state.filterCategory}
           modalIsOpen={this.state.modalIsOpen}
+          toggleModal={this.toggleModal}
         />
 
         <Featured />

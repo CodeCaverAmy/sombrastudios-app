@@ -38,7 +38,7 @@ const ProductModal = props =>
 
   ProductModal.propTypes = {
     modalIsOpen: PropTypes.bool.isRequired,
-    toggleModal: PropTypes.func.isRequired,
+    toggleModal: PropTypes.func.isRequired
   }
 
 

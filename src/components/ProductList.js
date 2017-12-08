@@ -11,58 +11,6 @@ import Products from '../data/products';
 
 export default class ProductList extends Component {
 
-  toggleModal = productId => {
-    this.getProductById(productId);
-    this.props.setState({
-      modalIsOpen: !this.props.state.modalIsOpen,
-    });
-  };
-
-  getProductById = id => {
-    var products = Products;
-    var keys = Object.keys(products);
-    for(var i = 0; i < keys.length; i++) {
-        var key = (keys[i]);
-        var product = products[key];
-        if(product.id === id) {
-          this.props.setState({
-            productModal: {
-              productId: product.id,
-              title: product.name,
-              image: product.image,
-              price: this.convertToCurrency(product.price),
-              description: this.getDescription(product.category)
-            }
-          });
-        }
-      }
-    };
-
-  convertToCurrency = number => {
-    var price = number.toString();
-    if (price.length <= 3) {
-      return "$" + price;
-    } else {
-      return "$" + price.slice(0, price.length-3) + "," + price.slice(number.length-3, 3);
-    }
-  };
-
-  getDescription = category => {
-    var description="";
-
-    if(category === "bracelet") {
-      description = 'Small: inside diameter of 5.5 inches.\nMedium: inside diameter of 5.75 inches.\nLarge: inside diamter of 6 inches.';
-    } else if (category === "pendant") {
-      description = 'Post and dangle are available.';
-    } else if (category === "ring") {
-      description = "Available in sizes 6 to 13 (American)";
-    } else if (category === "earring") {
-      description = 'Post and dangle are available.';
-    }
-    return description;
-  };
-
-
   render() {
     return (
       <Grid id="product-list">
@@ -74,10 +22,11 @@ export default class ProductList extends Component {
           .map((product, index) =>
             <Product
               key={index}
+              id={product.id}
               name={product.name}
               price={product.price}
               image={product.image}
-              toggleModal={this.toggleModal}
+              toggleModal={this.props.toggleModal}
             />
           )
         )
@@ -85,12 +34,13 @@ export default class ProductList extends Component {
         (
           Products
           .map((product, index) =>
-            <Product key={index}
+            <Product
+              key={index}
               id={product.id}
               name={product.name}
               price={product.price}
               image={product.image}
-              toggleModal={this.toggleModal}
+              toggleModal={this.props.toggleModal}
             />
           )
         )
@@ -104,4 +54,5 @@ export default class ProductList extends Component {
 ProductList.propTypes = {
   filterCategory: PropTypes.string.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired
 }
