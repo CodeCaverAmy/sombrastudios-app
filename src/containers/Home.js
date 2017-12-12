@@ -81,9 +81,9 @@ export default class Home extends Component {
     var description="";
 
     if(category === "bracelet") {
-      description = 'Small: inside diameter of 5.5 inches.\nMedium: inside diameter of 5.75 inches.\nLarge: inside diamter of 6 inches.';
+      description = 'Small: inside diameter of 5.5 inches.\nMedium: inside diameter of 5.75 inches.\nLarge: inside diamter of 6 inches. \nMedium sizes available immediately to ship within 14 days. All other sizes may take longer.';
     } else if (category === "pendant") {
-      description = 'Post and dangle are available.';
+      description = '';
     } else if (category === "ring") {
       description = "Available in sizes 6 to 13 (American)";
     } else if (category === "earring") {

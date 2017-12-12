@@ -10,12 +10,12 @@ const Footer = () =>
     <Row className="social-media">
       <Col xs={12} md={12} lg={12} className="text-center">
       <span>Follow us on </span>
-      <a href="https://twitter.com/_sombraloco_" target='_blank'>
+      <a href="https://twitter.com/_sombraloco_/" target='_blank' rel="noopener noreferrer">
         <FontAwesome
           name='twitter'
         />
       </a>
-      <a href="https://www.instagram.com/sombralocostudio/" arget='_blank'>
+      <a href="https://www.instagram.com/sombralocostudio/" target='_blank' rel="noopener noreferrer">
         <FontAwesome name='instagram'/>
       </a>
       </Col>

@@ -38,6 +38,7 @@ export default class ProductModal extends Component {
           </Row>
          </Modal.Body>
          <Modal.Footer>
+         <p>Contact us to order by calling: +1 505.288.9446 or emailing us at <a href="mailto:agregggarcia@gmail.com">agregggarcia@gmail.com</a></p>
           <Button onClick={() => this.props.toggleModal()}>Close</Button>
         </Modal.Footer>
       </Modal>

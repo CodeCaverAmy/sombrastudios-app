@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Grid, Row, Col, Button,
+  Grid, Row, Col,
   Image
 } from 'react-bootstrap';
 
@@ -15,7 +15,8 @@ const Featured = () =>
           <h1>The Beauty of Sarifice</h1>
           <p>Large wall hanging Cristo</p>
           <p>6 inches • 14kt • Sterling Silver • $1,200</p><br />
-          <p><Button>Buy Now</Button></p>
+          <p>Contact us to order by calling: +1 505.288.9446</p>
+          <p>or emailing us at <a href="mailto:agregggarcia@gmail.com">agregggarcia@gmail.com</a></p>
         </Col>
         <Col sm={3} md={3} lg={3}></Col>
       </Row>
