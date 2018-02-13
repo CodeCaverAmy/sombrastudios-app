@@ -46,7 +46,7 @@ const Footer = () =>
     </Row>
 
     <Row className="text-center copyright">
-      <p>Sombra Studios © 2017</p>
+      <p>Sombra Studios © 2018</p>
     </Row>
   </Grid>
 
