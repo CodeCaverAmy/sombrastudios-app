@@ -5,7 +5,7 @@ Andres Garcia is a contemporary southwestern, native artist and jewelry seeking 
 
 Andres had his nephew building a site, but looking for a site that would be snappier and more modern. This is an initial protoype and an going production of an updated site, built with React, using Redux to manage state and Firebase to store the jewelry inventory.
 
-## Hosting on [Heroku](http://https://www.heroku.com)
+## Hosting on [Heroku](https://www.heroku.com)
 Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
   * Make sure node is installed ````npm install --global surge````
