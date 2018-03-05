@@ -1,5 +1,6 @@
 # Sombra Studios E-Commerce Site (Prototype)
-http://sombrastudios.herokuapp.com/
+http://sombrastudios.herokuapp.com
+
 Andres Garcia is a contemporary southwestern, native artist and jewelry seeking a website that showcases his dynamic and sophisticated pieces which represent nature and life’s journeys. 
 
 Andres had his nephew building a site, but looking for a site that would be snappier and more modern. This is an initial protoype and an going production of an updated site, built with React, using Redux to manage state and Firebase to store the jewelry inventory.
